@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <input type="search" placeholder="Search...">
+            <ul>
+                <li><a href="#" id="home-btn" class="active">Home</a></li>
+                <li><a href="#" id="analytics-btn">Analytics</a></li>
+                <li><a href="#" id="settings-btn">Settings</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="profile-pic">
+                <img src="pfp.jfif" alt="Profile Picture">
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <main>
+            <section id="home" class="active">
+                <h1>Home</h1>
+                <div id="social-metrics">
+                    <!-- Social media metrics will be inserted here -->
+                </div>
+            </section>
+            
+            <section id="analytics">
+                <h1>Analytics</h1>
+                <div id="charts">
+                    <canvas id="followersChart"></canvas>
+                </div>
+            </section>
+            
+            <section id="settings">
+                <h1>Settings</h1>
+                
+                <form id="settings-form">
+                    <h2>Theme</h2>
+                    <div class="form-group">
+                        <label for="theme-toggle">Dark Mode</label>
+                        <label class="switch">
+                            <input type="checkbox" id="theme-toggle">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                
+                    <h2>Default View</h2>
+                    <div class="form-group">
+                        <label for="default-view">Select Default View:</label>
+                        <select id="default-view">
+                            <option value="home">Home</option>
+                            <option value="analytics">Analytics</option>
+                        </select>
+                    </div>
+                
+                    <h2>Language</h2>
+                    <div class="form-group">
+                        <label for="language">Select Language:</label>
+                        <select id="language">
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                            <option value="fr">Français</option>
+                        </select>
+                    </div>
+                
+                    <button type="submit">Save Settings</button>
+                </form>
+            </section>
+        </main>
+        <aside>
+            <div class="profile-container">
+                <img src="pfp.jfif" alt="Profile Picture" class="profile-pic">
+                <h2 class="profile-name">Me</h2>
+                <p class="profile-title">Profile Pic</p>
+            </div>
+            <!-- ... (other sidebar content) ... -->
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
